@@ -1,6 +1,6 @@
 package faceTheDragon;
 
-public abstract class AbstractDragon {
+public abstract class AbstractDragon implements GoldGoal, RideGoal {
 	private String name;
 	private int trust;
 	private int alertness;
@@ -44,4 +44,5 @@ public abstract class AbstractDragon {
 	public abstract void reactToSing();
 	public abstract void reactToPresent(Player player);
 	public abstract void reactToAproach();
+	public abstract void spell();
 }

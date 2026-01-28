@@ -6,7 +6,7 @@ public class Player {
 	private int food;
 	private int courage;
 	
-	public Player() {
+	public Player(String name) {
 		this.gold = 20;
 		this.food = 8;
 		this.courage = 60;
@@ -27,4 +27,9 @@ public class Player {
 	public int getCourage() {
 		return courage;
 	}
+	
+	public void setGold(int amount) {
+		gold -= amount;
+	}
 }
+

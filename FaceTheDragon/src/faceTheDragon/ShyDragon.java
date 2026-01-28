@@ -35,16 +35,40 @@ public class ShyDragon extends AbstractDragon {
 	@Override
 	public void reactToPresent(Player player) {
 		if (player.getGold() >= 10) {
+			player.setGold(10);
+			changeAletness(-2);
+			changeTrust(5);
 			
+		} else {
+			System.out.println("Nicht genug Gold");
+			changeAletness(1);
+			changeTrust(-3);
 		}
 	}
 	
 	@Override
 	public void reactToAproach() {
+		changeAletness(-2);
+		changeTrust(3);
+	}
+	
+	public void spell() {
+		System.out.println("Der ShyDragon startet seinen Angriff!");
+		int randnum = (int) (Math.random() * 2);
+		if (randnum == 1) {
+			System.out.println("Angriff gelungen");
+		} else if (randnum == 0) {
+			System.out.println("Angriff misslungen");
+		}
+	}
+	
+	@Override
+	public void winGold() {
 		
 	}
 	
-	public void fire() {
+	@Override
+	public void winRide() {
 		
 	}
 }

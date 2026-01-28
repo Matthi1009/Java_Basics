@@ -1,5 +1,6 @@
 package faceTheDragon;
 
-public class GoldGoal {
-
+public interface GoldGoal {
+	
+	public abstract void winGold();
 }

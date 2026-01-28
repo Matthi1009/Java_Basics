@@ -1,5 +1,7 @@
 package faceTheDragon;
 
-public class RideGoal {
-
+public interface RideGoal {
+	
+	public abstract void winRide();
+	
 }
